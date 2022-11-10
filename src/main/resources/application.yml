@@ -1,5 +1,21 @@
 server:
-  port: 8082
-  servlet:
-    context-path: /calculator
+  port: 8080
+#  servlet:
+#    context-path: /calculator
 
+spring:
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    # Borrar estas sentencias luego de crear la base de datos
+    generate-ddl: true
+    hibernate:
+      ddl-auto: create-drop
+      jdbc:
+        lob:
+          non_contextual_creation: true
+    #
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: deg159753
